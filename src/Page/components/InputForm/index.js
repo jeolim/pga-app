@@ -14,7 +14,14 @@ class InputForm extends Component {
     return (
       <Fragment>
         <label htmlFor={name}>{label}</label>
-        <input type="text" name={name} value={value} id={name} {...props} />
+        <input
+          type="text"
+          name={name}
+          value={value}
+          id={name}
+          {...props.isEditing && { className: "editing" }}
+          {...props}
+        />
         <br />
       </Fragment>
     );
@@ -80,11 +87,13 @@ class InputForm extends Component {
         <InputForm.Field
           label="First name"
           name="firstName"
+          isEditing={!this.props.showButton}
           {...this.getChangeProps("firstName")}
         />
         <InputForm.Field
           label="Last name"
           name="lastName"
+          isEditing={!this.props.showButton}
           {...this.getChangeProps("lastName")}
         />
         <InputForm.Field
@@ -94,6 +103,7 @@ class InputForm extends Component {
           min="0"
           max="100"
           pattern="\d*"
+          isEditing={!this.props.showButton}
           {...this.getChangeProps("score")}
         />
         <div className="error">{this.state.error}</div>

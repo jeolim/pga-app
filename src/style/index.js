@@ -51,6 +51,9 @@ const GlobalStyle = createGlobalStyle`
     width: 125px;
     height: 22px;
     border-radius: 2px;
+    &.editing {
+      background: yellow;
+    }
   }
 
 `;

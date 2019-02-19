@@ -5,7 +5,8 @@
   "scripts": {
     "clean-start": "rm -rf node_modules && npm i && npm start",
     "start": "webpack-dev-server --config webpack.dev",
-    "build": "webpack --config webpack.prod"
+    "build": "webpack --config webpack.prod",
+    "deploy": "npm run build && git push origin :gh-pages && git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
     "type": "git",
