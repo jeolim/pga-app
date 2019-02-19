@@ -7342,17 +7342,20 @@ function (_Component) {
         }
       }, react_default.a.createElement(InputForm.Field, InputForm_extends({
         label: "First name",
-        name: "firstName"
+        name: "firstName",
+        isEditing: !this.props.showButton
       }, this.getChangeProps("firstName"))), react_default.a.createElement(InputForm.Field, InputForm_extends({
         label: "Last name",
-        name: "lastName"
+        name: "lastName",
+        isEditing: !this.props.showButton
       }, this.getChangeProps("lastName"))), react_default.a.createElement(InputForm.Field, InputForm_extends({
         type: "number",
         label: "Score",
         name: "score",
         min: "0",
         max: "100",
-        pattern: "\\d*"
+        pattern: "\\d*",
+        isEditing: !this.props.showButton
       }, this.getChangeProps("score"))), react_default.a.createElement("div", {
         className: "error"
       }, this.state.error), this.props.showButton && react_default.a.createElement("button", null, "Add"));
@@ -7375,6 +7378,8 @@ InputForm_defineProperty(InputForm_InputForm, "Field", function (_ref) {
     name: name,
     value: value,
     id: name
+  }, props.isEditing && {
+    className: "editing"
   }, props)), react_default.a.createElement("br", null));
 });
 
@@ -7536,7 +7541,7 @@ function style_templateObject2() {
 }
 
 function style_templateObject() {
-  var data = style_taggedTemplateLiteral(["\n  body {\n    font-family: sans-serif;\n    margin: 0;\n    padding: 0;\n    height: 100%;\n    min-height: 100%;\n    font-size: 16px;\n  }\n\n  button {\n    height: 100%;\n    margin-right: .5rem;\n    border-radius: 5px;\n    &:focus {\n      outline: none;\n    }\n    &.highlight {\n      background: azure;\n    }\n  }\n\n  table {\n    background: white;\n    border-spacing: 0;\n    border-collapse: collapse;\n  }\n  table,\n  th,\n  td {\n    border: 1px solid black;\n    margin: 0;\n    padding: .25rem;\n    height: 30px;\n  }\n  thead {\n    text-align: left;\n  }\n  th {\n    height: 30px;\n  }\n  tr.highlight {\n    background: yellow;\n  }\n\n  label {\n    font-size: 1.25rem;\n  }\n  input {\n    width: 125px;\n    height: 22px;\n    border-radius: 2px;\n  }\n\n"]);
+  var data = style_taggedTemplateLiteral(["\n  body {\n    font-family: sans-serif;\n    margin: 0;\n    padding: 0;\n    height: 100%;\n    min-height: 100%;\n    font-size: 16px;\n  }\n\n  button {\n    height: 100%;\n    margin-right: .5rem;\n    border-radius: 5px;\n    &:focus {\n      outline: none;\n    }\n    &.highlight {\n      background: azure;\n    }\n  }\n\n  table {\n    background: white;\n    border-spacing: 0;\n    border-collapse: collapse;\n  }\n  table,\n  th,\n  td {\n    border: 1px solid black;\n    margin: 0;\n    padding: .25rem;\n    height: 30px;\n  }\n  thead {\n    text-align: left;\n  }\n  th {\n    height: 30px;\n  }\n  tr.highlight {\n    background: yellow;\n  }\n\n  label {\n    font-size: 1.25rem;\n  }\n  input {\n    width: 125px;\n    height: 22px;\n    border-radius: 2px;\n    &.editing {\n      background: yellow;\n    }\n  }\n\n"]);
 
   style_templateObject = function _templateObject() {
     return data;
