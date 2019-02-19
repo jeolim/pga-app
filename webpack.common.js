@@ -35,7 +35,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(["dist"]),
     new HtmlWebpackPlugin({
-      title: "Redox code challenge",
+      title: "PGA App",
       template: "./index.html"
     })
   ]

@@ -1,8 +1,7 @@
 {
   "name": "pga-app",
   "version": "1.0.0",
-  "description": "",
-  "main": "dist/index.js",
+  "description": "code-challenge-application",
   "scripts": {
     "clean-start": "rm -rf node_modules && npm i && npm start",
     "start": "webpack-dev-server --config webpack.dev",
@@ -10,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jeongl/react-sticky-footer.git"
+    "url": "git+https://github.com/jeolim/pga-app"
   },
   "author": "Jeong Lim",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jeongl/react-sticky-footer/issues"
+    "url": "https://github.com/jeolim/pga-app"
   },
-  "homepage": "https://github.com/jeongl/react-sticky-footer#readme",
+  "homepage": "https://github.com/jeolim/pga-app",
   "devDependencies": {
     "@babel/core": "^7.3.3",
     "@babel/plugin-proposal-class-properties": "^7.3.3",
